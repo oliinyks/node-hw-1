@@ -1,0 +1,20 @@
+{
+  "name": "hw-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliinyks/node-hw-1.git"
+  },
+  "author": "Svitlana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliinyks/node-hw-1/issues"
+  },
+  "homepage": "https://github.com/oliinyks/node-hw-1#readme"
+}
