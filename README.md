@@ -1,8 +1,8 @@
-# Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
-###https://monosnap.com/file/j7G4Y7aUsnkIbfWJcjXpDt4BcdEXIV
-# Отримуємо контакт по id
-###https://monosnap.com/file/1B8G8xXcq4j4Z7UT8xAnqT86k2DA2O
-# Додаємо контакт
-###https://monosnap.com/file/ICHvXd9jJNT3BGL1y9vfcTWoexoSBC
-# Видаляємо контакт
-###https://monosnap.com/file/BvAXOTYx9jE5xQCT2yiWOlK3ttPsIk
+## Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
+### https://monosnap.com/file/j7G4Y7aUsnkIbfWJcjXpDt4BcdEXIV
+## Отримуємо контакт по id
+### https://monosnap.com/file/1B8G8xXcq4j4Z7UT8xAnqT86k2DA2O
+## Додаємо контакт
+### https://monosnap.com/file/ICHvXd9jJNT3BGL1y9vfcTWoexoSBC
+## Видаляємо контакт
+### https://monosnap.com/file/BvAXOTYx9jE5xQCT2yiWOlK3ttPsIk
