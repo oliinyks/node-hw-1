@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/oliinyks/node-hw-1/issues"
   },
-  "homepage": "https://github.com/oliinyks/node-hw-1#readme"
+  "homepage": "https://github.com/oliinyks/node-hw-1#readme",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "uuid": "^9.0.0"
+  }
 }

@@ -1,24 +1,67 @@
 const fs = require("fs").promises;
-const contactsPath = "./db/contacts.json";
+const path = require("path");
+const contactsPath = path.resolve("./db/contacts.json");
+const { v4 } = require("uuid");
 
-//eadFile() і writeFile()
-// TODO: задокументувати кожну функцію
-function listContacts() {
-  return "sss";
-  // fs.readFile(filename, [options]);
-}
+const listContacts = async () => {
+  try {
+    const data = await fs.readFile(contactsPath);
+    const contacts = JSON.parse(data);
+    return contacts;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-function getContactById(contactId) {
-	// fs.readFile(filename, [options]);
-}
+const getContactById = async (contactId) => {
+  try {
+    const contacts = await listContacts();
+    const contact = contacts.find((contact) => contact.id === contactId);
 
-function removeContact(contactId) {
-  //fs.unlink(path, callback)
-}
+    if (!contact) {
+      return null;
+    }
 
-function addContact(name, email, phone) {
-	// fs.appendFile(filename, data, [options]);
-}
+    return contact;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const removeContact = async (contactId) => {
+  try {
+    const contacts = await listContacts();
+    const newContact = contacts.filter((item) => item.id !== contactId);
+	  await updateContact(newContact);
+    return newContact;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const addContact = async (name, email, phone) => {
+  try {
+    const newContact = { id: v4(), name, email, phone};
+    const contacts = await listContacts();
+
+    contacts.push(newContact);
+    await updateContact(contacts);
+    return newContact;
+  } catch (error) {
+    console.error(error);
+  }
+}; 
+
+const updateContact = async (contacts) => {
+  try {
+    await fs.writeFile(
+      contactsPath,
+      JSON.stringify(contacts, null, 2)
+    );
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 module.exports = {
   listContacts,
